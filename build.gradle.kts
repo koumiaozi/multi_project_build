@@ -17,3 +17,14 @@ allprojects {
 subprojects {
     version = "1.0"
 }
+
+configure(subprojects.filter { it.name == "greeter" || it.name == "greeting-library" }) {
+
+    apply(plugin = "groovy")
+
+    dependencies {
+        "testCompile"("org.spockframework:spock-core:1.0-groovy-2.4") {
+            exclude(module = "groovy-all")
+        }
+    }
+}

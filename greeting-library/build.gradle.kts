@@ -4,14 +4,7 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
-plugins {
-    groovy
-}
 
 dependencies {
     compile("org.codehaus.groovy:groovy:2.4.10")
-
-    testCompile("org.spockframework:spock-core:1.0-groovy-2.4") {
-        exclude(module = "groovy-all")
-    }
 }
